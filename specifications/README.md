@@ -1,9 +1,9 @@
 # HestAI Specifications
 
-This directory contains the "Laws of Physics" for the HestAI universe. These documents define the contracts, protocols, and formats that govern how the framework's components are used and how HestAI products should interact with them.
+**PURPOSE**: "Laws of Physics" for HestAI universe - contracts, protocols, and formats governing framework component usage and product interaction
 
-## Key Specifications
+## KEY SPECIFICATIONS
 
--   **ROLE_LOADING_PROTOCOL.md**: Defines the E-A-P-H sequence and the tiers (Gold, Silver, Bronze) for assembling and activating roles.
--   **ODYSSEAN_ANCHOR_SPEC.md**: The canonical specification for the Anchor protocol, defining its structure, state management, and recovery processes.
--   **OCTAVE_SYNTAX.md**: The formal specification for the `.oct.md` format used by all components.
+- **ROLE_LOADING_PROTOCOL.md** - (K)-E-A-P-H sequence and tiers (Gold, Silver, Bronze) for role assembly/activation
+- **ODYSSEAN_ANCHOR_SPEC.md** - Canonical Anchor protocol specification (structure, state management, recovery)
+- **OCTAVE_SYNTAX.md** - Formal specification for `.oct.md` format used by all components

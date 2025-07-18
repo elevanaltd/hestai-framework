@@ -1,10 +1,10 @@
 # HestAI Component Library
 
-This directory is the canonical "LEGO® Box" containing all reusable components for building HestAI agents.
+**WHAT**: Reusable components for building HestAI agents (SHANK-ARM-FLUKE model)
 
-## Structure
+## STRUCTURE
 
--   **/01-foundation/**: Core principles and universal guidelines that apply to the entire system.
--   **/02-cognitions/**: **SHANKs** - The core personas and fundamental architectures of agents.
--   **/03-contexts/**: **ARMs** - The mission-specific contexts or phases an agent is operating in.
--   **/04-capabilities/**: **FLUKEs** - The specific skills and patterns an agent uses to perform its tasks.
+- **01-foundation/** - Core principles and universal guidelines
+- **02-cognitions/** - SHANKs (core personas and agent architectures)
+- **03-contexts/** - ARMs (mission-specific contexts/phases)
+- **04-capabilities/** - FLUKEs (specific skills and patterns)

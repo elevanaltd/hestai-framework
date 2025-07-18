@@ -1,5 +1,4 @@
 # Foundation
 
-**Purpose:** Core principles and universal guidelines that apply to the entire HestAI system
-**Key Files:** `hestai-principles.oct.md`, `guidelines-universal.oct.md`
-**Owner:** Framework maintainers
+**PURPOSE**: Core principles and universal guidelines for entire HestAI system
+**FILES**: `hestai-principles.oct.md`, `guidelines-universal.oct.md`

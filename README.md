@@ -35,6 +35,9 @@ library/
 └── 04-capabilities/   # FLUKE files
     ├── skills/
     └── patterns/
+docs/
+├── reports/           # Framework analysis reports (MANDATORY template usage)
+└── guides/            # Documentation and usage guides
 ```
 
 ## Usage
@@ -47,3 +50,9 @@ This framework is consumed by `hestai-orchestrator`. Components are combined to 
 4. **FLUKE** loads bespoke skills crafted for that specific role
 
 Each role should have a corresponding 1-1 skill mapping for precision.
+
+## Reporting Framework Issues
+
+**MANDATORY TEMPLATE USAGE**: All framework reports MUST use the standardized template at `docs/reports/00-REPORT_TEMPLATE.md`. 
+
+See `docs/reports/README.md` for complete reporting guidelines. Reports without proper template formatting will be rejected.
