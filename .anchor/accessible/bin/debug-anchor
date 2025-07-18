@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "=== ANCHOR DEBUG INFO ==="
+echo "Current directory: $(pwd)"
+echo "Git root: $(git rev-parse --show-toplevel 2>/dev/null || echo 'Not in git repo')"
+echo "PROJECT_ROOT would be: $(git rev-parse --show-toplevel 2>/dev/null || pwd)"
+echo ""
+echo "Looking for restore content at:"
+PROJECT_ROOT="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
+RESTORE_CONTENT="$PROJECT_ROOT/.anchor/accessible/anchor_restore.md"
+echo "$RESTORE_CONTENT"
+echo ""
+echo "File exists? $([ -f "$RESTORE_CONTENT" ] && echo 'YES' || echo 'NO')"
+echo ""
+echo "Contents of .anchor directory:"
+ls -la "$PROJECT_ROOT/.anchor/"
+echo ""
+echo "Lock file exists? $([ -f "$PROJECT_ROOT/.anchor/protected/anchor.lock" ] && echo 'YES' || echo 'NO')"

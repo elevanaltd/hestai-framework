@@ -1,0 +1,19 @@
+#!/bin/bash
+set -euo pipefail
+
+# anchor-resume
+# Removes the anchor.lock to deactivate the Anchor Checkpoint System
+
+# Smart project detection
+PROJECT_ROOT="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
+LOCK_FILE="$PROJECT_ROOT/.anchor/protected/anchor.lock"
+
+if [ -f "$LOCK_FILE" ]; then
+    rm "$LOCK_FILE"
+    echo "✅ Anchor Checkpoint System DEACTIVATED"
+    echo "🔓 System unlocked - all tools now permitted"
+    echo "Lock file removed: $LOCK_FILE"
+else
+    echo "ℹ️  No active Anchor Checkpoint found"
+    echo "Lock file does not exist: $LOCK_FILE"
+fi

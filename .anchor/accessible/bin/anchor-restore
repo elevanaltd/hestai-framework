@@ -1,0 +1,78 @@
+#!/bin/bash
+set -euo pipefail
+
+# Smart project detection
+PROJECT_ROOT="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
+RESTORE_CONTENT="$PROJECT_ROOT/.anchor/accessible/anchor_restore.md"
+LOCK_FILE="$PROJECT_ROOT/.anchor/protected/anchor.lock"
+IDENTITY_CONTEXT="$PROJECT_ROOT/.anchor/accessible/current/identity_context.oct.md"
+
+show_restore_content() {
+    if [ -f "$RESTORE_CONTENT" ]; then
+        cat "$RESTORE_CONTENT"
+    else
+        echo "ERROR: Restore content not found. Project may be corrupted." >&2
+        exit 1
+    fi
+}
+
+extract_validation_key() {
+    local key=""
+    if [ -f "$IDENTITY_CONTEXT" ]; then
+        # Try comment format first: // Validation Key: ITHACA
+        key=$(grep -oE '^//[[:space:]]*Validation Key:[[:space:]]*[A-Z]+' "$IDENTITY_CONTEXT" |
+              sed 's/.*Key:[[:space:]]*//')
+        
+        # Fallback to OCTave format: VALIDATION_KEY::"ITHACA"  
+        [ -z "$key" ] && \
+        key=$(grep -oE '^VALIDATION_KEY::"[A-Z]+"' "$IDENTITY_CONTEXT" |
+              sed 's/.*::"\\([A-Z]*\\)".*/\\1/')
+    fi
+    echo "${key:-ITHACA}"
+}
+
+complete_restore() {
+    local provided_code="$1"
+    local expected_code
+    expected_code=$(extract_validation_key)
+    
+    if [ "$provided_code" = "$expected_code" ]; then
+        echo "✅ ANCHOR RESTORE VALIDATED"
+        echo "Identity context successfully reconstructed with key: $expected_code"
+        echo "Divine restoration confirmed. Removing lock file."
+        
+        # Actually remove the lock file
+        if [ -f "$LOCK_FILE" ]; then
+            rm "$LOCK_FILE"
+            echo "🔓 System resumed. Normal operations can resume."
+        else
+            echo "ℹ️  No lock file found (already resumed)."
+        fi
+        exit 0
+    else
+        echo "❌ RESTORE FAILED: Invalid restoration code" >&2
+        echo "Expected: $expected_code, Got: $provided_code" >&2
+        echo "Please read your identity context file and extract the correct validation key." >&2
+        exit 1
+    fi
+}
+
+case "${1:-}" in
+    --complete) 
+        if [ -z "${2:-}" ]; then
+            echo "❌ ERROR: --complete requires a validation key" >&2
+            echo "Usage: anchor-restore --complete ITHACA" >&2
+            exit 1
+        fi
+        complete_restore "$2"
+        ;;
+    *) 
+        # Check if system is actually paused first
+        if [ ! -f "$LOCK_FILE" ]; then
+            echo "ℹ️  System is not paused - no restore needed"
+            echo "Lock file does not exist: $LOCK_FILE"
+            exit 0
+        fi
+        show_restore_content 
+        ;;
+esac

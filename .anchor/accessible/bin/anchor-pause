@@ -1,0 +1,24 @@
+#!/bin/bash
+set -euo pipefail
+
+# anchor-pause
+# Creates the anchor.lock to activate the Anchor Checkpoint System
+
+# Smart project detection
+PROJECT_ROOT="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
+LOCK_FILE="$PROJECT_ROOT/.anchor/protected/anchor.lock"
+
+# Create the lock file
+if [ ! -f "$LOCK_FILE" ]; then
+    touch "$LOCK_FILE"
+    echo "✅ Anchor Checkpoint System ACTIVATED"
+    echo "🔒 System paused - only anchor-restore commands permitted"
+    echo "Lock file created: $LOCK_FILE"
+else
+    echo "⚠️  Anchor Checkpoint already active"
+    echo "Lock file exists: $LOCK_FILE"
+fi
+
+echo ""
+echo "To restore, run: .anchor/accessible/bin/anchor-restore"
+echo "Note: Lock file is protected and cannot be manually removed"
