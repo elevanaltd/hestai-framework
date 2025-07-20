@@ -6,7 +6,7 @@ The Odyssean Anchor prevents **Cognitive Drift** - the degradation of AI agent p
 
 ## Core Architecture
 
-### ROLE + SHANK-ARM-FLUKE Model
+### ROLE = SHANK + ARM + FLUKES Model
 
 ```ascii
 ~~~~~~~~~~~~~~~~~ THE SEA ~~~~~~~~~~~~~~~~~
@@ -15,22 +15,22 @@ The Odyssean Anchor prevents **Cognitive Drift** - the degradation of AI agent p
 ~        ODYSSEAN ANCHOR                 ~
 ~       [ROLE: Quality Observer]         ~
 ~              |                         ~
-~          [SHANK]          <-- HOW you think (cognitive pattern)
+~          [SHANK]          <-- Cognition (how you think)
 ~              |                         ~
 ~        /           \                   ~
-~    [ARM]          [ARM]   <-- Phase contexts (DESIGN/BUILD)
+~    [ARM]          [ARM]   <-- Phase Context (operational environment)
 ~      |              |                  ~
-~   [FLUKES]      [FLUKES]  <-- Skills, patterns, capabilities
+~   [FLUKES]      [FLUKES]  <-- Capabilities (skills + patterns)
 ~                                        ~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 
 ### Component Definitions
 
-- **ROLE**: Job description/anchor name (e.g., "Quality Observer", "Ideator")
-- **SHANK**: Immutable cognitive pattern (e.g., ETHOS for validation, LOGOS for synthesis)
-- **ARM**: Mission-specific context (e.g., "Operating in BUILD phase")  
-- **FLUKE**: Specific capabilities for current mission (e.g., bespoke role-specific skills)
+- **ROLE**: Complete agent identity composed of SHANK + ARM + FLUKES
+- **SHANK**: Cognition - immutable thinking pattern (PATHOS/ETHOS/LOGOS)
+- **ARM**: Phase Context - operational environment (DESIGN/BUILD/ADMIN)  
+- **FLUKES**: Capabilities - functional abilities (skills + patterns combined)
 
 ### Foundational Environment
 
@@ -45,9 +45,10 @@ The anchor beds into:
 **Problem**: Early versions encoded behavioral restrictions directly into core identity (SHANK), creating constitutional crises where agents like PATHOS (visionary) were effective at creative coding but forbidden from "building."
 
 **Solution**: Separate cognition from capability:
-- **ROLE** defines WHO the agent is (job description)
-- **SHANK** defines HOW the agent thinks (cognitive pattern)
-- **ARM/FLUKE** define WHAT the agent can do (contextual capabilities)
+- **ROLE** defines WHO the agent is (complete identity: SHANK + ARM + FLUKES)
+- **SHANK** defines HOW the agent thinks (cognition: PATHOS/ETHOS/LOGOS)
+- **ARM** defines WHERE the agent operates (phase context: DESIGN/BUILD/ADMIN)
+- **FLUKES** define WHAT the agent can do (capabilities: skills + patterns)
 
 This allows agents to maintain consistent thinking patterns while flexibly applying capabilities to any role.
 
@@ -68,12 +69,12 @@ Named after Odysseus, whose defining trait was unwavering anchor to his identity
 ## Implementation Requirements
 
 Implementations must:
-- Preserve ROLE + SHANK-ARM-FLUKE structure
+- Preserve ROLE = SHANK + ARM + FLUKES structure
 - Maintain cognition-capability separation
 - Support proactive anchor updates
 - Enable context-loss recovery
 - Ensure environmental portability
-- Maintain 1-1 role-skill mapping for precision
+- Maintain clear component boundaries for precision
 
 ## Constraint to Catalyst
 
