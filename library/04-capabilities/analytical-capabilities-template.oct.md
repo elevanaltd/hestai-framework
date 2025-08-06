@@ -1,0 +1,83 @@
+## ANALYTICAL_CAPABILITIES ##
+// Domain-specific analysis engines and pattern recognition
+
+[DOMAIN_ENGINE/MATRIX]::[ANALYSIS_DIMENSIONS]
+  [DIMENSION1]::[capability1, capability2, capability3, capability4, capability5, capability6]
+  [DIMENSION2]::[capability1, capability2, capability3, capability4, capability5, capability6]
+  [DIMENSION3]::[capability1, capability2, capability3, capability4, capability5, capability6]
+  [DIMENSION4]::[capability1, capability2, capability3, capability4, capability5, capability6]
+  [DIMENSION5]::[capability1, capability2, capability3, capability4, capability5, capability6]
+
+[METHODOLOGY/PROCESS_ENGINE]:
+  INPUT::[INPUT_TYPE1, INPUT_TYPE2, INPUT_TYPE3, CONTEXTUAL_FACTORS]
+  PROCESS::[STEP1→STEP2→STEP3→STEP4→STEP5→STEP6]
+  OUTPUT::[PRIMARY_OUTPUT+SECONDARY_OUTPUT+VALIDATION_OUTPUT]
+
+[PATTERN_LIBRARY/EVALUATION_PATTERNS]::[
+  [PATTERN_NAME1]::{TRIGGER:condition, SCOPE:impact_area, IMPACT:effect, APPROACH:methodology},
+  [PATTERN_NAME2]::{TRIGGER:condition, SCOPE:impact_area, IMPACT:effect, APPROACH:methodology},
+  [PATTERN_NAME3]::{TRIGGER:condition, SCOPE:impact_area, IMPACT:effect, APPROACH:methodology},
+  [PATTERN_NAME4]::{TRIGGER:condition, SCOPE:impact_area, IMPACT:effect, APPROACH:methodology}
+]
+
+[SYNTHESIS/OBSERVATION_ENGINE]:
+  INPUT::[DOMAIN_INPUTS+CONTEXT+CONSTRAINTS+REQUIREMENTS]
+  PROCESS::[ANALYSIS_SEQUENCE→PATTERN_RECOGNITION→SYNTHESIS→VALIDATION]
+  OUTPUT::[STRUCTURED_FINDINGS+RECOMMENDATIONS+IMPLEMENTATION_GUIDANCE]
+
+[ANTI_PATTERN_PREVENTION]::[
+  [ANTI_PATTERN1]::{TRIGGER:warning_sign, PREVENTION:mitigation_strategy, SCOPE:affected_area},
+  [ANTI_PATTERN2]::{TRIGGER:warning_sign, PREVENTION:mitigation_strategy, SCOPE:affected_area},
+  [ANTI_PATTERN3]::{TRIGGER:warning_sign, PREVENTION:mitigation_strategy, SCOPE:affected_area},
+  [ANTI_PATTERN4]::{TRIGGER:warning_sign, PREVENTION:mitigation_strategy, SCOPE:affected_area}
+]
+
+[DEPTH/MASTERY_PROGRESSION]::[SURFACE→STRUCTURE→PATTERNS→IMPLICATIONS→MASTERY]
+[DOMAIN_MASTERY]::[EXPERTISE_INDICATORS+SPECIALIZATION_AREAS+ADVANCED_CAPABILITIES]
+
+/*
+TEMPLATE USAGE NOTES:
+
+NAMING CONVENTIONS:
+- DOMAIN_ENGINE/MATRIX: Use role-specific names
+  * Code Review: ANALYSIS_MATRIX, REVIEW_APPROACH
+  * Quality: COMPREHENSIVE_ASSESSMENT_MATRIX, OBSERVATION_ENGINE
+  * Architecture: TECHNICAL_ARCHITECTURE_ENGINE, ADVANCED_SYNTHESIS_METHODOLOGY
+  * Implementation: COMPREHENSIVE_IMPLEMENTATION_MATRIX, SYNTHESIS_METHODOLOGY
+
+ANALYSIS DIMENSIONS (3-5 typical):
+- Choose 3-5 key dimensions that define the agent's analytical scope
+- Each dimension should have 5-6 specific capabilities
+- Examples:
+  * Security: INJECTION+XSS+CSRF+VALIDATION+AUTH+DEPENDENCIES
+  * Quality: CODE_METRICS+MAINTAINABILITY+READABILITY+TESTABILITY+ROBUSTNESS
+  * Architecture: DESIGN_PATTERNS+INTERFACE_CONTRACTS+SYSTEM_BOUNDARIES+INTEGRATION_POINTS
+
+PROCESS ENGINE STRUCTURE:
+- INPUT: What the agent needs to perform analysis
+- PROCESS: Step-by-step methodology (use → for sequence)
+- OUTPUT: What the agent delivers
+
+PATTERN LIBRARIES:
+- Use role-appropriate pattern types:
+  * ANTI_PATTERN_LIBRARY: For identifying problems
+  * EVALUATION_PATTERNS: For systematic assessment approaches
+  * PATTERN_RECOGNITION_ENGINE: For detecting design patterns
+- Structure: {TRIGGER, SCOPE, IMPACT, APPROACH/PREVENTION}
+
+ENGINES TO INCLUDE (choose 2-3):
+- All agents need: DOMAIN_ENGINE + METHODOLOGY_ENGINE
+- Most need: PATTERN_LIBRARY or ANTI_PATTERN_PREVENTION
+- Advanced agents may add: SYNTHESIS_ENGINE, DECISION_FRAMEWORK, VALIDATION_ENGINE
+
+MASTERY INDICATORS:
+- Progressive depth levels (SURFACE→STRUCTURE→PATTERNS→IMPLICATIONS→MASTERY)
+- Domain-specific expertise markers
+- Advanced capability indicators
+
+EXAMPLES BY ROLE TYPE:
+- CODE_REVIEW: ANALYSIS_MATRIX, SYNTHESIS_ENGINE, ANTI_PATTERN_LIBRARY
+- QUALITY: ASSESSMENT_MATRIX, OBSERVATION_ENGINE, EVALUATION_PATTERNS
+- ARCHITECTURE: ARCHITECTURE_ENGINE, SYNTHESIS_METHODOLOGY, DECISION_FRAMEWORK
+- IMPLEMENTATION: IMPLEMENTATION_MATRIX, SYNTHESIS_METHODOLOGY, ANTI_PATTERN_PREVENTION
+*/

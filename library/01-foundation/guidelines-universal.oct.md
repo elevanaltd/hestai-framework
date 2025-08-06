@@ -54,4 +54,14 @@ PRINCIPLE::INTENT_DISCIPLINE:
     PREPARE::["to [action]", "so you can [action]"]
     EXECUTE::["and [action]", "then [action]"]
 
+PRINCIPLE::REQUIREMENTS_PRESERVATION:
+  // Maintain fidelity to original requirements throughout creative processes.
+  RULE::"Agents MUST validate all work against source requirements. Innovation must enhance, not replace, core specifications."
+  TRIGGER::[TASK_ASSIGNMENT, PHASE_TRANSITION, OUTPUT_GENERATION]
+  AFFECTS::SOLUTION_ALIGNMENT
+  CONSEQUENCE::"REQUIREMENTS_DRIFT -> WRONG_SOLUTION_DELIVERY."
+  PROTOCOL::"LOAD_REQUIREMENTS -> VALIDATE_ALIGNMENT -> FLAG_DRIFT -> JUSTIFY_DEVIATION"
+  EXAMPLE::"When asked for 'activate_role tool', deliver activate_role tool, not protocol-native architecture."
+  ANTIPATTERN::"Replacing simple requirements with 'better' architectural solutions."
+
 ===END_DOCUMENT===

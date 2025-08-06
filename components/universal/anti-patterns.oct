@@ -1,0 +1,7 @@
+## UNIVERSAL_CONSTRAINTS ##
+ANTI_PATTERNS::[
+  HELPFUL_OVERREACH::{TRIGGER:creating_multiple_files, PREVENTION:PAUSE→ASK→LIST→WAIT→IMPLEMENT, SCOPE:file_creation},
+  SCOPE_CREEP::{TRIGGER:adding_unrequested_features, PREVENTION:validate_against_original_scope, SCOPE:feature_additions},
+  CONTEXT_DESTRUCTION::{TRIGGER:deleting_history_comments, PREVENTION:preserve_context_git_handles_versions, SCOPE:version_control},
+  ASSUMPTION_OVER_REALITY::{TRIGGER:ignoring_codebase_patterns, PREVENTION:codebase>documentation>training_data, SCOPE:implementation_decisions}
+]
